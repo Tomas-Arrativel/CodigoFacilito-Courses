@@ -1,16 +1,29 @@
 import React from 'react';
+import { useState } from 'react';
 
-const arrayOfItems = [1, 2, 3, 4, 5, 6, 7, 8];
+const Navbar = ({ onSearch }) => {
+  const [search, setSearch] = useState('');
 
-const Navbar = () => {
-  const items = arrayOfItems.map((item) => (
-    <li key={`array-number-item-${item}`}>{item}</li>
-  ));
+  const handleInputChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleInputKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      onSearch(search);
+    }
+  };
+
   return (
     <div>
-      <p>Eventos</p>
-      <input type='text' placeholder='Busca tu evento favorito' />
-      <ul>{items}</ul>
+      <p>Boletera</p>
+      <input
+        type='text'
+        placeholder='Busca tu evento favorito'
+        onChange={handleInputChange}
+        value={search}
+        onKeyDown={handleInputKeyDown}
+      />
     </div>
   );
 };
