@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 
-const Navbar = ({ onSearch }) => {
+const Navbar = forwardRef(({ onSearch }, ref) => {
   const [search, setSearch] = useState('');
 
   // useEffect(() => {
@@ -26,7 +26,7 @@ const Navbar = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div ref={ref}>
       <p>Boletera</p>
       <input
         type='text'
@@ -37,6 +37,8 @@ const Navbar = ({ onSearch }) => {
       />
     </div>
   );
-};
+});
+
+Navbar.displayName = 'Navbar';
 
 export default Navbar;
