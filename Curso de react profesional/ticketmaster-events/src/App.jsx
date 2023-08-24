@@ -7,15 +7,16 @@ import './App.css';
 
 function App() {
   const [searchText, setSearchText] = useState('');
+
   const handleNavbarSearch = (term) => {
     setSearchText(term);
   };
 
   return (
     <>
-      {/*<Navbar onSearch={handleNavbarSearch} />
-      <Events searchText={searchText} />*/}
-      <SignUpForm />
+      <Navbar onSearch={handleNavbarSearch} />
+      <Events searchText={searchText} />
+      {/*<SignUpForm  />*/}
     </>
   );
 }
