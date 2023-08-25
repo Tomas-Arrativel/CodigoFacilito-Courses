@@ -1,0 +1,25 @@
+.eventItemContainer {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+  align-items: start;
+}
+
+.eventInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 14px;
+}
+.eventInfoContainer p {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.eventInfoContainer button {
+  background-color: #0e141e;
+  color: #fff;
+}

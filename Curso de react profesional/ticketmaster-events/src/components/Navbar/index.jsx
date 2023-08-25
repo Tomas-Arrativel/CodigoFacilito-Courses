@@ -1,4 +1,9 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, {
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+} from 'react';
 
 const Navbar = forwardRef(({ onSearch }, ref) => {
   const [search, setSearch] = useState('');
@@ -15,6 +20,11 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
   //   console.log('search cambio');
   // }, [search]);
 
+  useImperativeHandle(ref, () => ({
+    search,
+    setSearch,
+  }));
+
   const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
@@ -26,15 +36,42 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
   };
 
   return (
-    <div ref={ref}>
-      <p>Boletera</p>
-      <input
-        type='text'
-        placeholder='Busca tu evento favorito'
-        onChange={handleInputChange}
-        value={search}
-        onKeyDown={handleInputKeyDown}
-      />
+    <div
+      ref={ref}
+      style={{
+        marginBottom: 14,
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-around',
+      }}
+    >
+      <div style={{ flex: 1, display: 'flex' }}>
+        <p style={{ fontSize: 24, fontWeight: 900 }}>Boletera</p>
+      </div>
+      <div
+        style={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <input
+          type='text'
+          placeholder='Busca tu evento favorito'
+          onChange={handleInputChange}
+          value={search}
+          onKeyDown={handleInputKeyDown}
+          style={{
+            fontSize: 16,
+            padding: '6px 12px',
+            borderRadius: 5,
+            border: '1px solid #777',
+            outline: 'none',
+            width: 200,
+          }}
+        />
+      </div>
     </div>
   );
 });
