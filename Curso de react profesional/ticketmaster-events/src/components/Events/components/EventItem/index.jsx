@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './EventItem.module.css';
 
 const EventItem = ({ info, name, image, onEventClick, id }) => {
@@ -16,7 +15,10 @@ const EventItem = ({ info, name, image, onEventClick, id }) => {
       <div className={styles.eventInfoContainer}>
         <h4>{name}</h4>
         <p>{info}</p>
-        <button onClick={handleSeeMoreClick}>Ver más</button>
+        <button onClick={handleSeeMoreClick}>
+          {/* <Link to={`/detail/${id}`}>Ver más</Link> */}
+          Ver más
+        </button>
       </div>
     </div>
   );
