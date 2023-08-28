@@ -2,10 +2,11 @@ import { useRef, useState } from 'react';
 
 import Navbar from './components/Navbar';
 import Events from './components/Events';
-import SignUpForm from './components/SignUpForm';
+import Routes from './routes';
 import './App.css';
 
 function App() {
+  /*
   const [searchText, setSearchText] = useState('');
   const containerRef = useRef();
 
@@ -18,9 +19,11 @@ function App() {
     <>
       <Navbar onSearch={handleNavbarSearch} ref={containerRef} />
       <Events searchText={searchText} />
-      {/*<SignUpForm  />*/}
+      <SignUpForm  />
     </>
   );
+*/
+  return <Routes />;
 }
 
 export default App;
