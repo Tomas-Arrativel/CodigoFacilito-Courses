@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.mainInfoContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.eventImage {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.eventTitle {
+  margin: 15px 0;
+  font-size: 28px;
+}
+
+.eventInfo {
+  font-size: 17px;
+  text-align: left;
+  margin: 0;
+}
+
+.startDate {
+  font-weight: 500;
+  font-size: 14px;
+}
+.startDate span {
+  font-weight: 900;
+}
+
+.seatInfoContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.seatInfoContainer h4 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.seatInfoContainer p:first-of-type {
+  font-size: 12px;
+  text-align: left;
+  margin-top: 15px;
+  font-style: italic;
+}
+.seatInfoContainer p:last-of-type {
+  margin: 0;
+}
+
+.goForTicketsBtn {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
