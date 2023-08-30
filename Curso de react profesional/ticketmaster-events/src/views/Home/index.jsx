@@ -1,4 +1,10 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  useMemo,
+} from 'react';
 import ReactPaginate from 'react-paginate';
 
 import useEventsResults from '../../state/events-results';
@@ -9,8 +15,11 @@ import styles from './Home.module.css';
 
 const Home = () => {
   const { data, isLoading, error, fetchEvents } = useEventsResults();
-  const events = data?._embedded?.events || [];
-  const page = data?.page || {};
+  const events = useMemo(
+    () => data?._embedded?.events || [],
+    [data?._embedded?.events],
+  );
+  const page = useMemo(() => data?.page || {}, [data?.page]);
 
   const [searchText, setSearchText] = useState('');
   const containerRef = useRef();
