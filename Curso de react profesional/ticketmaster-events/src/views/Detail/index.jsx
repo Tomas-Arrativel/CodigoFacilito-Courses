@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import useEventsResults from '../../state/events-results';
 import styles from './Detail.module.css';
 
 const Detail = () => {

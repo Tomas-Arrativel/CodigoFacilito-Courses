@@ -1,14 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 
-import useEventData from '../../hooks/useEventsData';
+import useEventsResults from '../../state/events-results';
 import Navbar from '../../components/Navbar';
 import Events from '../../components/Events';
 
 import styles from './Home.module.css';
 
 const Home = () => {
-  const { events, isLoading, error, fetchEvents, page } = useEventData();
+  const { data, isLoading, error, fetchEvents } = useEventsResults();
+  const events = data?._embedded?.events || [];
+  const page = data?.page || {};
+
   const [searchText, setSearchText] = useState('');
   const containerRef = useRef();
 
