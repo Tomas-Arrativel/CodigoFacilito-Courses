@@ -5,14 +5,16 @@ import HearthFilled from '../../../../assets/hearth-filled.png';
 import HearthUnfilled from '../../../../assets/hearth-unfilled.png';
 
 const EventItem = ({ info, name, image, onEventClick, id }) => {
-  const { isEventLiked } = useLikeEvents(id);
+  const { isEventLiked, toggleEventLike } = useLikeEvents(id);
 
   const handleSeeMoreClick = (e) => {
     e.stopPropagation();
     onEventClick(id);
   };
 
-  const handleHearthClick = () => {};
+  const handleHearthClick = () => {
+    toggleEventLike();
+  };
 
   return (
     <div
