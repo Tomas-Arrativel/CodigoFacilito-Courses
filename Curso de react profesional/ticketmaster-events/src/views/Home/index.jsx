@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactPaginate from 'react-paginate';
 
 import useEventsResults from '../../state/events-results';
@@ -24,9 +24,12 @@ const Home = () => {
     fetchEvents(`&keyword=${term}`);
   };
 
-  const handlePageClick = ({ selected }) => {
-    fetchEvents(`&keyword=${searchText}&page=${selected}`);
-  };
+  const handlePageClick = useCallback(
+    ({ selected }) => {
+      fetchEvents(`&keyword=${searchText}&page=${selected}`);
+    },
+    [searchText, fetchEvents],
+  );
 
   const renderEvents = () => {
     if (isLoading) {
