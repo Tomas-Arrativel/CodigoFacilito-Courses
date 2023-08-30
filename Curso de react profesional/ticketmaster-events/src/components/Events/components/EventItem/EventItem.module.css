@@ -26,3 +26,15 @@
 .eventInfoContainer button a {
   color: #fff;
 }
+
+.imagesContainer {
+  position: relative;
+}
+.hearthImage {
+  position: absolute;
+  width: 40px;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
