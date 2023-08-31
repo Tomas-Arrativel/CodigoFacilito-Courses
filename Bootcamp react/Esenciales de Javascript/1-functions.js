@@ -5,10 +5,10 @@
  * Intenta descomentar la siguiente linea de código.
  * Mira `ƒ saludar() {}` imprimirse en la consola.
  */
-// console.log(saludar);
-// function saludar() {
-//   console.log("Hola mundo");
-// }
+console.log(saludar);
+function saludar() {
+  console.log('Hola mundo');
+}
 
 /**
  * A diferencia de las declaraciones, aquí las funciones se crean dentro de expresiones.
@@ -17,10 +17,10 @@
  * Mira `undefined` imprimirse en la consola.
  */
 // console.log(saludar());
-let saludar = function saludar2() {
-  console.log("Hola mundo");
-  imprimirNombreDeFuncion(saludar2);
-};
+// let saludar = function saludar2() {
+//   console.log("Hola mundo");
+//   imprimirNombreDeFuncion(saludar2);
+// };
 
 let imprimirNombreDeFuncion = (fn) => {
   console.log(fn.name);
