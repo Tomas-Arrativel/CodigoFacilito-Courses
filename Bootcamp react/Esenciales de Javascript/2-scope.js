@@ -5,8 +5,8 @@
  * Básicamente es la raíz de nuestro script, donde creamos las primeras declaraciones
  * y expresiones.
  */
-var nombre = "Jerom";
-let curso = "Esenciales de JavaScript";
+var nombre = 'Tomás';
+let curso = 'Esenciales de JavaScript';
 
 function tomarCurso() {
   /**
@@ -17,15 +17,15 @@ function tomarCurso() {
    * Descomenta la siguiente linea y
    * veras que ahora estas tomando una clase de cocina.
    */
-  // curso = "Cocina";
-  let canal = "Código facilito";
+  curso = 'Cocina';
+  let canal = 'Código facilito';
   console.log(
-    `Hola! ${nombre}, has tomado el curso ${curso} a través de ${canal}`
+    `Hola! ${nombre}, has tomado el curso ${curso} a través de ${canal}`,
   );
 }
 
 function reproducirVideo() {
-  curso = "Matemáticas";
+  curso = 'Matemáticas';
   console.log(`Has reproducido el video para el curso ${curso}`);
 }
 
@@ -39,4 +39,4 @@ function reproducirVideo() {
  * Playground.
  */
 tomarCurso();
-// reproducirVideo();
+reproducirVideo();
