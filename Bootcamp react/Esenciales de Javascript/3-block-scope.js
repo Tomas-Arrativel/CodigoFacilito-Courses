@@ -3,13 +3,13 @@
  * mientras que Var podrá ser “vista” por todo el bloque que la función haya creado.
  */
 function imprimirSecreto(clave) {
-  if (clave === "supersecreta") {
+  if (clave === 'supersecreta') {
     /**
      * Convierte el secreto de var a let.
      * Finalmente puedes usar const y mirar el mismo efecto.
      */
-    // let secreto = "42";
-    var secreto = "42";
+    // const secreto = '42';
+    var secreto = '42';
   }
 
   console.log(`El secreto es ${secreto}`);
@@ -18,4 +18,4 @@ function imprimirSecreto(clave) {
 /**
  * Playground.
  */
-imprimirSecreto("supersecreta");
+imprimirSecreto('supersecreta');
