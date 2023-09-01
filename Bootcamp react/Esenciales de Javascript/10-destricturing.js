@@ -1,5 +1,5 @@
 const array = [1, 2, 3];
-const obj = { nombre: "Jerome", edad: 26 };
+const obj = { nombre: 'Tomás', edad: 26 };
 
 /**
  * Las propiedades se pueden usar o cambiar como nombres de variables.
