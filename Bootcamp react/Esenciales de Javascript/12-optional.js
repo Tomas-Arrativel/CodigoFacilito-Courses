@@ -1,8 +1,8 @@
-let user = { name: "Jerome" };
+let user = { name: 'Tomás' };
 let fallback = {
   inscribir() {
-    return "Inscription automática a curso nuevo.";
-  }
+    return 'Inscription automática a curso nuevo.';
+  },
 };
 
 /**
