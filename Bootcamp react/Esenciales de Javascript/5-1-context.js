@@ -1,7 +1,8 @@
 /**
  * Descomenta la siguiente linea para habilitar el modo estricto.
  */
-// "use strict";
+"use strict";
+
 let application = {
   execute() {
     console.log("Dentro de application el contexto es: ", this);
