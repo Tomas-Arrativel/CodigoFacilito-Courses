@@ -1,5 +1,5 @@
 let numeros = [10, 20];
-let obj = { nombre: "Jerome", edad: 26 };
+let obj = { nombre: 'Tomás', edad: 26 };
 
 function suma(a, b) {
   return a + b;
@@ -13,6 +13,6 @@ let copiaDeObjeto = { ...obj, edad: 20 };
  */
 console.log(`El resultado de suma es: ${suma(...numeros)}`);
 console.log(
-  `Copiamos ${JSON.stringify(obj)} en ${JSON.stringify(copiaDeObjeto)}`
+  `Copiamos ${JSON.stringify(obj)} en ${JSON.stringify(copiaDeObjeto)}`,
 );
 console.log(`Copiamos ${numeros} en ${copiaDeNumeros}`);
