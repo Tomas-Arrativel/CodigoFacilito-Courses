@@ -1,11 +1,11 @@
-const nombre = "<Pon tu nombre aquí>";
+const nombre = 'Tomás';
 const edad = 26;
 
 /**
  * Puedes procesar el string, con cada uno de los parametros que fue interpolado.
  */
 function myTag(strings, nombre, edad) {
-  const mensaje = edad > 99 ? "no tan joven" : "joven";
+  const mensaje = edad > 99 ? 'no tan joven' : 'joven';
   return `${nombre}${strings[1]}${mensaje}`;
 }
 
