@@ -1,7 +1,7 @@
 /**
  * Descomenta la siguiente linea para habilitar el modo estricto.
  */
-// "use strict";
+'use strict';
 
 let objA = {
   numbers: [1, 2, 3],
@@ -14,7 +14,7 @@ let objA = {
        */
       console.log(this);
     });
-  }
+  },
 };
 
 let objB = {
@@ -23,7 +23,7 @@ let objB = {
     this.numbers.forEach(() => {
       console.log(this);
     });
-  }
+  },
 };
 
 /**
