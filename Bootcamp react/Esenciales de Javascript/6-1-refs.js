@@ -1,12 +1,12 @@
 /**
  * Variables primitivas.
  */
-let nombre = "Jerome";
-let curso = "Esenciales de JavaScript";
+let nombre = 'Tomás';
+let curso = 'Esenciales de JavaScript';
 
 function tomarCurso(nombre, curso) {
-  curso = "Cocina";
-  console.log(`Hola! ${nombre}, has tomado el curso ${curso}`);
+  curso = 'Javascript';
+  console.log(`Hola! ${nombre}, has tomado el curso de ${curso}`);
 }
 
 /**
