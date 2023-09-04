@@ -35,4 +35,7 @@ responsePartners?.toString().concat('');
 // Type ASSERTION
 
 let message: any = '';
-let messageUpperCase = (message as string).toUpperCase();
+// let messageUpperCase = (message as string).toUpperCase();
+let messageUpperCase = (<string>message).toUpperCase();
+
+const canvas = <HTMLCanvasElement>document.getElementById('canvas');
