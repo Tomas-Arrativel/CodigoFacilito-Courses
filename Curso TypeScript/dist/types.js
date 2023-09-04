@@ -22,3 +22,8 @@ response5 === null || response5 === void 0 ? void 0 : response5.toString();
 var responseProducts;
 var responsePartners;
 responsePartners === null || responsePartners === void 0 ? void 0 : responsePartners.toString().concat('');
+// Type ASSERTION
+var message = '';
+// let messageUpperCase = (message as string).toUpperCase();
+var messageUpperCase = message.toUpperCase();
+var canvas = document.getElementById('canvas');
