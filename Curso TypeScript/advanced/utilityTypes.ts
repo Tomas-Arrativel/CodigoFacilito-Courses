@@ -18,7 +18,7 @@ updateTask(1, newTask);
 //   name?: string;
 // }
 
-const myToDo: Required<ToDo> = { id: 1, name: 'Limpiar' };
+// const myToDo: Required<ToDo> = { id: 1, name: 'Limpiar' };
 
 //Records<Keys, Types> Creacion de objetos
 interface CatInfo {
