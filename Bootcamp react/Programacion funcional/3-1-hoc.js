@@ -1,5 +1,5 @@
 /**
- * Collecion de funciones puras.
+ * Coleccion de funciones puras.
  * Aqui debe estar el 80% de mi logica.
  */
 function obtenerNombresDeRepositorios(repos) {
@@ -14,7 +14,7 @@ function obtenerResumenDeUsuario({ nombre, repos, agregarRepo }) {
   return {
     nombre,
     repos,
-    agregarRepo
+    agregarRepo,
   };
 }
 
@@ -35,10 +35,10 @@ function obtenerJson(url) {
 
 async function myApp() {
   const githubRepos = await obtenerJson(
-    "https://api.github.com/users/codigofacilito/repos"
+    'https://api.github.com/users/codigofacilito/repos',
   );
   const githubUser = await obtenerJson(
-    "https://api.github.com/users/codigofacilito"
+    'https://api.github.com/users/codigofacilito',
   );
 
   const repos = obtenerNombresDeRepositorios(githubRepos);
@@ -46,11 +46,11 @@ async function myApp() {
   const resumen = obtenerResumenDeUsuario({
     nombre,
     repos,
-    agregarRepo: (nuevoRepo) => agregarNuevoRepositorio(repos, nuevoRepo)
+    agregarRepo: (nuevoRepo) => agregarNuevoRepositorio(repos, nuevoRepo),
   });
 
   console.log({ resumen });
-  const nuevosRepos = resumen.agregarRepo("Nuevo");
+  const nuevosRepos = resumen.agregarRepo('Nuevo');
   console.log({ nuevosRepos, resumen: resumen.repos });
 }
 

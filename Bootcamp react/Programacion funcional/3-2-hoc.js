@@ -11,7 +11,7 @@ function obtenerResumenDeUsuario(nombre, repos) {
     return {
       nombre,
       repos,
-      agregarRepo
+      agregarRepo,
     };
   };
 }
@@ -22,11 +22,9 @@ function perfilador(perfil) {
   };
 }
 
-// No contaminar mas arriba
-
-const senorizador = perfilador("Mr.");
-const doctorizador = perfilador("Dr.");
-const maestrizador = perfilador("Mto.");
-const ingenierizador = perfilador("Ing.");
-const licenciadizador = perfilador("Lic.");
-console.log(ingenierizador("Jerome"));
+const senorizador = perfilador('Mr.');
+const doctorizador = perfilador('Dr.');
+const maestrizador = perfilador('Mto.');
+const ingenierizador = perfilador('Ing.');
+const licenciadizador = perfilador('Lic.');
+console.log(ingenierizador('Jerome'));
