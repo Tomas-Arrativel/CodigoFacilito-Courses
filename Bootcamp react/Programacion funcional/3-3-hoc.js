@@ -14,7 +14,7 @@ function ResumenDelUsuario({ nombre, repos, agregarRepo }) {
   return {
     nombre,
     repos,
-    agregarRepo: (repos) => agregarRepo(repos)
+    agregarRepo: (repos) => agregarRepo(repos),
   };
 }
 
@@ -34,18 +34,18 @@ function usarHttpCall(url) {
 }
 
 async function fakeReact() {
-  const nuevoRepo = "NuevoRepo";
+  const nuevoRepo = 'NuevoRepo';
   const githubRepos = await usarHttpCall(
-    "https://api.github.com/users/codigofacilito/repos"
+    'https://api.github.com/users/codigofacilito/repos',
   );
   const githubUser = await usarHttpCall(
-    "https://api.github.com/users/codigofacilito"
+    'https://api.github.com/users/codigofacilito',
   );
 
   return ResumenDelUsuario({
     nombre: TituloDelUsuario(githubUser),
     repos: ListaDeRepos(githubRepos),
-    agregarRepo: (repos) => agregarNuevoRepositorio(repos, nuevoRepo)
+    agregarRepo: (repos) => agregarNuevoRepositorio(repos, nuevoRepo),
   });
 }
 
