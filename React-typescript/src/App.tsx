@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import List from './components/List';
 import Form from './components/Form';
@@ -21,6 +21,7 @@ const INITIAL_STATE = [
 function App() {
   const [subs, setSubs] = useState<Array<Sub>>([]);
   const [newSubsNumber, setNewSubsNumber] = useState(0);
+  const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setSubs(INITIAL_STATE);
@@ -31,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className='App' ref={divRef}>
       <h1>Midu Subs</h1>
       <List subs={subs} />
       <Form onNewSub={handleNewSub} />
