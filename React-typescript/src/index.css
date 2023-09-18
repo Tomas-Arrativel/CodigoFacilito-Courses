@@ -65,6 +65,16 @@ form input {
   margin: 5px;
 }
 
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 6px;
+  resize: vertical;
+  margin: 5px;
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -80,6 +90,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 5px;
 }
 button:hover {
   border-color: #646cff;
