@@ -1,12 +1,7 @@
-import { render } from 'react-dom';
+import { Sub } from '../types';
 
 interface Props {
-  subs: Array<{
-    nick: string;
-    avatar: string;
-    subMonths: number;
-    description?: string;
-  }>;
+  subs: Array<Sub>;
 }
 
 const List = ({ subs }: Props) => {

@@ -2,13 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import List from './components/List';
 import Form from './components/Form';
-
-interface Sub {
-  nick: string;
-  avatar: string;
-  subMonths: number;
-  description?: string;
-}
+import { Sub } from './types';
 
 const INITIAL_STATE = [
   {
