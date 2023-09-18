@@ -20,16 +20,21 @@ const INITIAL_STATE = [
 
 function App() {
   const [subs, setSubs] = useState<Array<Sub>>([]);
+  const [newSubsNumber, setNewSubsNumber] = useState(0);
 
   useEffect(() => {
     setSubs(INITIAL_STATE);
   }, []);
 
+  const handleNewSub = (newSub: Sub): void => {
+    setSubs((subs) => [...subs, newSub]);
+  };
+
   return (
     <div className='App'>
       <h1>Midu Subs</h1>
       <List subs={subs} />
-      <Form />
+      <Form onNewSub={handleNewSub} />
     </div>
   );
 }
