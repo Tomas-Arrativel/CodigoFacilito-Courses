@@ -20,7 +20,7 @@ const INITIAL_STATE = [
 
 function App() {
   const [subs, setSubs] = useState<Array<Sub>>([]);
-  const [newSubsNumber, setNewSubsNumber] = useState(0);
+  const [newSubsNumber, setNewSubsNumber] = useState(2);
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,11 +29,13 @@ function App() {
 
   const handleNewSub = (newSub: Sub): void => {
     setSubs((subs) => [...subs, newSub]);
+    setNewSubsNumber((n) => n + 1);
   };
 
   return (
     <div className='App' ref={divRef}>
       <h1>Midu Subs</h1>
+      <p>Total subs: {newSubsNumber}</p>
       <List subs={subs} />
       <Form onNewSub={handleNewSub} />
     </div>
