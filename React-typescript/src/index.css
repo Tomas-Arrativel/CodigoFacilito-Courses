@@ -53,6 +53,18 @@ li {
   padding: 8px 32px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 6px;
+  margin: 5px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
