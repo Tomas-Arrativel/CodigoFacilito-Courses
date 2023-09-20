@@ -1,3 +1,5 @@
+import { Roboto } from 'next/font/google';
+
 import Navbar from '../components/Navbar';
 
 export const metadata = {
@@ -6,10 +8,16 @@ export const metadata = {
   keywords: 'tienda, online, ecommerce',
 };
 
+const roboto = Roboto({
+  weight: ['300', '400', '700'],
+  style: ['italic', 'normal'],
+  subsets: ['latin-ext'],
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body>
+      <body className={roboto.className}>
         <Navbar />
 
         {children}
