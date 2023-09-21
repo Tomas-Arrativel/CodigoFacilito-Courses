@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import './tienda_globals.css';
 
 export const metadata = {
   title: 'My Store',
@@ -7,7 +8,7 @@ export const metadata = {
 const TiendaLayout = ({ children }) => {
   return (
     <>
-      <ul>
+      <ul className='tienda__navbar'>
         <h3>Seccion tienda</h3>
         <li>
           <Link href='/tienda/categorias'>Categorias</Link>

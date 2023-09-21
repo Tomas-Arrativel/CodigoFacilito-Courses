@@ -1,11 +1,11 @@
 'use client';
-
 import Link from 'next/link';
+import './PostCard.css';
 
 //RCC
 const PostCard = ({ post }) => {
   return (
-    <div key={post.id}>
+    <div className='post__container' key={post.id}>
       <Link href={`/posts/${post.id}`}>
         <h3>
           {post.id}. {post.title}

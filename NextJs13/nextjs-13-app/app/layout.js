@@ -2,6 +2,8 @@ import { Roboto } from 'next/font/google';
 
 import Navbar from '../components/Navbar';
 
+import './globals.css';
+
 export const metadata = {
   title: 'Tomi web',
   description: 'Esta es la pagina principal de mi tienda',

@@ -1,0 +1,10 @@
+.post__container {
+  width: 100%;
+  border-bottom: 2px solid #202020;
+  padding-bottom: 20px;
+}
+
+.post__container a {
+  font-size: 23px;
+  color: #fff;
+}

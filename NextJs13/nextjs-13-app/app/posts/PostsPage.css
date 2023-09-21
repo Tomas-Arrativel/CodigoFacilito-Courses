@@ -1,0 +1,11 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 30px;
+  background-color: #292929;
+  margin-top: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
