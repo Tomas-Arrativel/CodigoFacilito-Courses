@@ -1,5 +1,5 @@
 'use client';
-import Users from '../components/Users';
+import Users from '@/components/Users';
 
 const Page = () => {
   return (
