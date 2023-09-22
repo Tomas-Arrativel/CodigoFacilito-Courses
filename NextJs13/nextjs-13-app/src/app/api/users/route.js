@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+console.log(process.env.TOKEN, process.env.SECRET_KEY);
+
 export async function GET() {
   //Exctract params
   //Query database
