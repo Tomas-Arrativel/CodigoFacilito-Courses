@@ -9,7 +9,10 @@ export async function GET() {
   return NextResponse.json(data);
 }
 
-export function POST() {
+export async function POST(req) {
+  const { nombre, apellido } = await req.json();
+  console.log(nombre, apellido);
+
   return NextResponse.json({
     message: 'Mandando datos!',
   });
