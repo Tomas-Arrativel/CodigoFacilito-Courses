@@ -1,7 +1,9 @@
 'use client';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 function NewPage() {
+  const router = useRouter();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target.title.value;
@@ -16,6 +18,8 @@ function NewPage() {
     });
     const data = res.json();
     console.log(data);
+
+    router.push('/');
   };
   return (
     <div className='h-screen flex justify-center items-center'>
