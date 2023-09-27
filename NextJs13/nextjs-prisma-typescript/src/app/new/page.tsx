@@ -1,10 +1,13 @@
 'use client';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 function NewForm() {
   const { handleSubmit, register } = useForm();
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
+
+  const onSubmit = handleSubmit(async (data) => {
+    const res = await axios.post('/api/tasks', data);
+    console.log(res);
   });
 
   return (
