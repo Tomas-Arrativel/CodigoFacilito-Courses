@@ -1,5 +1,30 @@
+'use client';
+import { useForm } from 'react-hook-form';
+
 function NewForm() {
-  return <div>NewForm</div>;
+  const { handleSubmit, register } = useForm();
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
+  return (
+    <section className='h-screen flex items-center justify-center'>
+      <form onSubmit={onSubmit}>
+        <input
+          type='text'
+          placeholder='Escribe un titulo'
+          className='px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-gray-600 block mb-2'
+          {...register('title')}
+        />
+        <textarea
+          placeholder='Escribe una descripcion'
+          className='px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-gray-600 block w-full mb-4'
+          {...register('description')}
+        ></textarea>
+        <button>Crear tarea</button>
+      </form>
+    </section>
+  );
 }
 
 export default NewForm;
