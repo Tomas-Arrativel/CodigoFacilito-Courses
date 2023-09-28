@@ -9,8 +9,6 @@ function NewForm({ params }: { params: { id: string } }) {
 
   const router = useRouter();
 
-  console.log(params);
-
   useEffect(() => {
     if (params.id) {
       axios.get(`/api/tasks/${params.id}`).then((res) => {
@@ -53,9 +51,31 @@ function NewForm({ params }: { params: { id: string } }) {
           className='px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-gray-600 block w-full mb-2'
           {...register('description')}
         ></textarea>
-        <button className='bg-sky-500 px-3 p-2 rounded-md'>
-          {params.id ? 'Editar' : 'Crear'}
-        </button>
+
+        <div className='flex justify-between'>
+          <button
+            type='submit'
+            className='bg-sky-500 hover:bg-sky-400 px-3 p-2 rounded-md mt-2'
+          >
+            {params.id ? 'Editar' : 'Crear'}
+          </button>
+
+          {params.id && (
+            <button
+              type='button'
+              className='bg-red-600 hover:bg-red-500 px-3 p-2 rounded-md mt-2'
+              onClick={async () => {
+                if (confirm('¿Estas seguro de borrar la tarea?')) {
+                  await axios.delete(`/api/tasks/${params.id}`);
+                  router.push('/');
+                  router.refresh();
+                }
+              }}
+            >
+              Eliminar
+            </button>
+          )}
+        </div>
       </form>
     </section>
   );
