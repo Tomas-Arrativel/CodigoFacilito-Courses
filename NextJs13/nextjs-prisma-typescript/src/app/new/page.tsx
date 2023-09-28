@@ -29,8 +29,11 @@ function NewForm({ params }: { params: { id: string } }) {
   });
 
   return (
-    <section className='h-screen flex items-center justify-center'>
-      <form onSubmit={onSubmit}>
+    <section className='h-[calc(100vh-8rem)] flex items-center justify-center'>
+      <form onSubmit={onSubmit} className='w-1/4'>
+        <h1 className='text-3xl font-bold'>
+          {params.id ? 'Editar' : 'Crear'} tarea
+        </h1>
         <label htmlFor='title' className='font-bold text-xs'>
           Escribe tu titulo:
         </label>
@@ -38,7 +41,7 @@ function NewForm({ params }: { params: { id: string } }) {
           id='title'
           type='text'
           placeholder='Escribe un titulo'
-          className='px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-gray-600 block mb-2'
+          className='px-3 py-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-sky-300 focus:border-sky-300 text-gray-600 block mb-2 w-full'
           {...register('title')}
         />
 
