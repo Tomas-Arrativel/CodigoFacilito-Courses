@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   searchInput: {
-    fontFamily: FONT.regular,
+    fontWeight: '400',
     width: '100%',
     height: '100%',
     paddingHorizontal: SIZES.medium,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     borderColor: activeJobType === item ? COLORS.secondary : COLORS.gray2,
   }),
   tabText: (activeJobType, item) => ({
-    fontFamily: FONT.medium,
+    fontWeight: '500',
     color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
   }),
 });
